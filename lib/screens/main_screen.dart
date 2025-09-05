@@ -194,7 +194,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
     required VoidCallback onTap,
     Color? color,
   }) {
-    final buttonColor = color ?? const Color.fromARGB(255, 158, 100, 177);
+    final buttonColor = color ?? AppTheme.primaryColor;
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -260,9 +260,9 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
           title: Row(
             children: [
-              Icon(Icons.warning, color: Colors.orange),
+              Icon(Icons.warning, color: const Color.fromARGB(255, 248, 123, 20)),
               SizedBox(width: 8),
-              Text('ยืนยันการลบนัดหมาย'),
+              Text('ยืนยันการลบ'),
             ],
           ),
           content: Text('คุณต้องการลบกิจกรรม "${activity.title}" หรือไม่?'),
